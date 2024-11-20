@@ -2,7 +2,6 @@ import { Button, createTheme, MantineProvider, Textarea, TextInput, Title } from
 import { emotionTransform, MantineEmotionProvider } from "@mantine/emotion";
 import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
-import "@mantine/dropzone/styles.css";
 import "@mantine/dates/styles.css";
 import { ComponentType, createElement } from "react";
 import { Notifications } from "@mantine/notifications";

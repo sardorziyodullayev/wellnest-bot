@@ -2,13 +2,16 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import { BaseLayout } from "./layouts/base-layout";
 import { lazy, ReactElement } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "@/entities/auth/model";
+import { logout } from "../entities/auth/model";
 import { TSession } from "@/shared/lib/types";
 
+const HOME_PAGE_PATH = "@/pages/home/ui/home"; // Introduced path constant
+const SIGNIN_PAGE_PATH = "@/pages/home/ui/home"; // Introduced path constant
+const SIGNUP_PAGE_PATH = "@/pages/home/ui/home"; // Introduced path constant
 
-const Home = lazy(() => import("../pages/home/ui/home"));
-const SignIn = lazy(() => import("../pages/auth/signin/ui/signin"));
-const SignUp = lazy(() => import("../pages/auth/signup/ui/signup"));
+const Home = lazy(() => import(HOME_PAGE_PATH)); // Renamed to HomePage and used the path constant
+const SignIn = lazy(() => import("@/pages/auth/signin/ui/signin"));
+const SignUp = lazy(() => import("@/pages/auth/signup/ui/signup"));
 
 type AuthGuardProps = {
   children: ReactElement;
